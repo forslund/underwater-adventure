@@ -103,9 +103,19 @@ the operative word the cramped space has been crushed down. The rear of the
 room seems pretty much unharmed and an impressive rack of controls and panels
 are slowly rusing in the salty water."""
 
+controls = Thing('controls')
+controls.description = """None of the levers move and none of the lights are on
+
+Well apparently this sunken ship isn't in mint condition."""
+
+panels = Thing('panels')
+panels.description = "The needles in these gauges are all perfectly still."
+steering_hut.objects.append(controls)
+steering_hut.objects.append(panels)
+
+
 engine_room = Room()
-engine_room.description = """A heap of rusting machinery. the water almost
-feels dirty."""
+engine_room.description = """A heap of rusting machinery. the water almost feels dirty."""
 engine_room.objects.append(weld)
 
 galley = Room()
@@ -195,6 +205,7 @@ start_room.objects.append(thing)
 
 flashlight = Thing('flashlight')
 flashlight.inventory_name = 'flashlight that has never failed you'
+flashlight.description = "A trusty flashlight you've had since forever."
 flashlight.room_description = 'A flashlight lies on the floor casting a cone of dim light.'
 start_room.objects.append(flashlight)
 flashlight.gettable = True
