@@ -126,7 +126,7 @@ table_knife = Thing()
 table_knife.name = 'knife'
 table_knife.inventory_name = 'Table knife'
 table_knife.description = "A very dull knife with a flat edge."""
-table_knife.room_description = "The only thing in decent shape in the drawe is a table knife."
+table_knife.room_description = "The only thing in decent shape in the drawer is a table knife."
 
 drawer.objects.append(table_knife)
 
@@ -138,7 +138,7 @@ U.S. Marines FIRST to fight in France for freedom!
 
 
 """
-plaque.room_description = "Beside one of the bulkheads hangs a large plaque."
+plaque.room_description = "Beside one of the bulkheads hangs a large plaque, something in a corner reflects your flashlight briefly."
 
 key = Thing()
 key.name = "key"
