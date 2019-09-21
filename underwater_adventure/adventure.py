@@ -68,7 +68,7 @@ You are trapped.\n\n""")
 
 if __name__ == '__main__':
     inp = None
-    #introduction()
+    introduction()
     print(player.location.look())
 
     while (inp != 'quit'):
