@@ -1,4 +1,4 @@
-from base import Room, Thing, Exit
+from .base import Room, Thing, Exit
 
 
 class Weld(Thing):
