@@ -1,4 +1,4 @@
-from world import darkness, flashlight
+from .world import darkness, flashlight
 
 vowels = ['a', 'e', 'i', 'o', 'u']
 

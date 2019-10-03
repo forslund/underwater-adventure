@@ -1,7 +1,7 @@
 from time import sleep
 
-from player import Player
-from world import start_room
+from .player import Player
+from .world import start_room
 
 
 player = Player(start_room)
@@ -66,7 +66,7 @@ pushed down by the weight of the hatch.\n""")
 You are trapped.\n\n""")
 
 
-if __name__ == '__main__':
+def simple_game_loop():
     inp = None
     introduction()
     print(player.location.look())
