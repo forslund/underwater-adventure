@@ -23,7 +23,7 @@ from setuptools import setup
 
 setup(
     name='underwater-adventure',
-    version='0.8.3',
+    version='0.1.0',
     packages=['underwater_adventure'],
     install_requires=[],
     url='https://github.com/forslund/underwater-adventure',
@@ -31,11 +31,14 @@ setup(
     author='forslund',
     author_email='ake.forslund@gmail.com',
     description='A short underwater adventure',
+    long_description=('A text adventure where you\'re trapped inside a sunken '
+                      'ship. Explore the ship and find the tools needed to '
+                      'escape.'),
+    long_description_content_type='text/x-rst',
     entry_points={
         'console_scripts': {
             ('underwater-adventure=underwater_adventure.adventure:'
              'simple_game_loop')
         }
-    },
-    #data_files=[('underwater-adventure')]
+    }
 )
