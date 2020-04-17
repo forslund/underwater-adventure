@@ -1,0 +1,29 @@
+name: underwater-adventure
+license: Apache-2.0
+version: "0.1"
+summary: A wake word listener from Mycroft AI
+description: >
+  A short text based adventure.
+
+  You are a diver trapped in a sunken ship, you must get out.
+
+base: core18
+grade: stable
+confinement: strict
+build-packages: [python3-dev, python3-setuptools]
+parts:
+  underwater-adventure:
+    plugin: python
+    python-version: python3
+    source: https://github.com/forslund/underwater-adventure.git
+    source-type: git
+    source-branch: master
+    build-packages:
+        - python-setuptools
+        - python3-pip
+    stage-packages:
+        - python3
+apps:
+  underwater-adventure:
+    plugs: []
+    command: bin/underwater-adventure
