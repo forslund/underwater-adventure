@@ -1,6 +1,6 @@
 name: underwater-adventure
 license: Apache-2.0
-version: "0.1"
+version: "0.1.1"
 summary: A wake word listener from Mycroft AI
 description: >
   A short text based adventure.
