@@ -25,5 +25,4 @@ parts:
         - python3
 apps:
   underwater-adventure:
-    plugs: []
     command: bin/underwater-adventure
