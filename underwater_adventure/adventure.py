@@ -1,28 +1,39 @@
 from time import sleep
 
 from .player import Player
+from .translation import open_locale_file
 from .world import start_room
-
 
 player = Player(start_room)
 
-verbs = {
-    'look': player.look,
-    'check': player.look,
-    'inspect': player.look,
-    'push': player.push,
-    'pull': player.pull,
-    'pick': player.pickup,
-    'get': player.pickup,
-    'take': player.pickup,
-    'open': player.open_exit,
-    'go': player.move,
-    'enter': player.move,
-    'swip': player.move,
-    'inventory': player.inventory,
-    'use': player.use,
-    'unlock': player.use
-}
+verbs = {}
+
+
+def setup(lang):
+    with open_locale_file(lang, 'keywords/look') as f:
+        for line in f:
+            verbs[line.strip()] = player.look
+    with open_locale_file(lang, 'keywords/push') as f:
+        for line in f:
+            verbs[line.strip()] = player.push
+    with open_locale_file(lang, 'keywords/pull') as f:
+        for line in f:
+            verbs[line.strip()] = player.pull
+    with open_locale_file(lang, 'keywords/pickup') as f:
+        for line in f:
+            verbs[line.strip()] = player.pickup
+    with open_locale_file(lang, 'keywords/open') as f:
+        for line in f:
+            verbs[line.strip()] = player.open_exit
+    with open_locale_file(lang, 'keywords/move') as f:
+        for line in f:
+            verbs[line.strip()] = player.move
+    with open_locale_file(lang, 'keywords/inventory') as f:
+        for line in f:
+            verbs[line.strip()] = player.inventory
+    with open_locale_file(lang, 'keywords/use') as f:
+        for line in f:
+            verbs[line.strip()] = player.use
 
 
 def parse_input(sentence):

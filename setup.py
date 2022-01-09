@@ -20,6 +20,8 @@ setup(
     version='0.1.0',
     packages=['underwater_adventure'],
     install_requires=[],
+    package_data={'underwater_adventure': ['locale/***']},
+    include_package_data=True,
     url='https://github.com/forslund/underwater-adventure',
     license='Apache-2.0',
     author='forslund',
@@ -31,8 +33,8 @@ setup(
     long_description_content_type='text/x-rst',
     entry_points={
         'console_scripts': {
-            ('underwater-adventure=underwater_adventure.adventure:'
-             'simple_game_loop')
+            ('underwater-adventure=underwater_adventure.__main__:'
+             'main')
         }
     }
 )
